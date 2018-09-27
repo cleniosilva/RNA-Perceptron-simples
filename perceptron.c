@@ -3,7 +3,7 @@
 #define TRUE 1
 #define FALSE 0
 /*RNA Perceptron simples
-Author CLÊNIO EDUARDO DA SILVA*/
+Author CLÃŠNIO EDUARDO DA SILVA*/
 	
 int main(){
 	int i,j,cont;
@@ -16,7 +16,7 @@ int main(){
 		
 	//matriz de entradas	
 	int entradas[4][4] = {{1,0,0,0},{1,0,1,0},{1,1,0,0},{1,1,1,1}};
-	//inicialização do vetor de pesos	
+	//inicializaÃ§Ã£o do vetor de pesos	
 	double pesos[3] = {0.0};
 		
 	int nAmostras = 4;
@@ -26,7 +26,7 @@ int main(){
 	
 	//varicavel de erro	
 	int erro;	
-	//sinal de ativação
+	//sinal de ativaÃ§Ã£o
 	double sinal;
 	
 	//linha da matriz
@@ -35,7 +35,7 @@ int main(){
 	//sinal de saida
 	int y;
 
-/*----------------------------iniciando algoritimo de treinamento--------------------------------------------*/	
+/*----------------------------iniciando algoritmo de treinamento--------------------------------------------*/	
 	do
 	{
 		//setando a variavel de erros para inexistente
@@ -53,7 +53,7 @@ int main(){
 					sinal = sinal + entradas[linha][i] * pesos[i];
 					
 				}					
-				//função de ativação
+				//funÃ§Ã£o de ativaÃ§Ã£o
 				if(sinal <= 0)
 				{
 					y = 0;					
@@ -65,7 +65,7 @@ int main(){
 				} 
 				
 					
-					//verifica a saida para atualização dos pesos
+					//verifica a saida para atualizaÃ§Ã£o dos pesos
 					if(y != entradas[linha][3])
 					{
 						
@@ -90,7 +90,7 @@ int main(){
 		
 	}while(erro == TRUE && nEpocas <= maxEpocas );
 	
-	/*-------------------------------------------fim do algoritimo de treinamento----------------------------------------*/
+	/*-------------------------------------------fim do algoritmo de treinamento----------------------------------------*/
 	
 	if(erro == FALSE)
 	{	
